@@ -54,4 +54,4 @@ function jwt_payload_roles(r) {
   // return jwt(r.args.myjwt).payload.sub;
 }
 
-export default {authz};
+export default {authz, jwt_payload_roles};

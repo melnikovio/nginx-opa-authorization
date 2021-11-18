@@ -13,11 +13,6 @@ services:
       - /etc/opa/rbac.json
       - /etc/opa/rbac.rego
 
-  web:
-    image: nginx:1.21.4-alpine
-    volumes:
-      - ./web/html:/usr/share/nginx/html:ro
-
   nginx:
     image: nginx:1.21.4-alpine
     ports:
@@ -27,4 +22,3 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - opa
-      - web
