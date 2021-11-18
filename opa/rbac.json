@@ -1,0 +1,13 @@
+{
+  "roles": {
+    "viewer": {
+      "/security/*": ["GET"]
+    },
+    "editor": {
+      "/security/*": ["GET", "POST", "PUT"]
+    },
+    "admin": {
+      "/security/*": ["GET", "POST", "PUT", "DELETE"]
+    }
+  }
+}

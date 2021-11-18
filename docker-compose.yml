@@ -1,0 +1,30 @@
+version: '3'
+services:
+  opa:
+    image: openpolicyagent/opa:0.34.2
+    ports:
+      - 8181:8181
+    volumes:
+      - ./opa:/etc/opa
+    command:
+      - run
+      - --server
+      - --log-level=debug
+      - /etc/opa/rbac.json
+      - /etc/opa/rbac.rego
+
+  web:
+    image: nginx:1.21.4-alpine
+    volumes:
+      - ./web/html:/usr/share/nginx/html:ro
+
+  nginx:
+    image: nginx:1.21.4-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - opa
+      - web
