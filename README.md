@@ -2,7 +2,8 @@
 
 This repository demonstrates how to implement role based access control (RBAC) on
 [Nginx](https://nginx.org/) with
-[Open Policy Agent](https://www.openpolicyagent.org/).
+[Open Policy Agent](https://www.openpolicyagent.org/)
+and JWT-token (Keycloak).
 
 ## How to use
 
