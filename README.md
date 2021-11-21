@@ -50,5 +50,5 @@ and the Open Policy Agent performs authorization based on the role.
 
 ## Useful links
 
-Nginx + OPA with certficiates - <https://github.com/summerwind/opa-nginx-rbac>
+Nginx + OPA with certficiates - <https://github.com/summerwind/opa-nginx-rbac>  
 Nginx Plus + OPA - <https://github.com/lcrilly/nginx-plus-opa>
