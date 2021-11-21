@@ -13,6 +13,7 @@ docker-compose up -d
 ```
 
 First send request to `/jwt/create` route to create a token.
+Token will be created similar to Keycloak token.
 
 - `/jwt/create` will generate jwt token without roles
 - `/jwt/create/viewer` will generate jwt token with role `viewer`
@@ -46,3 +47,8 @@ and the Open Policy Agent performs authorization based on the role.
   }
 }
 ```
+
+## Useful links
+
+Nginx + OPA with certficiates - <https://github.com/summerwind/opa-nginx-rbac>
+Nginx Plus + OPA - <https://github.com/lcrilly/nginx-plus-opa>
